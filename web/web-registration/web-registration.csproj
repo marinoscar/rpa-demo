@@ -67,6 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\scripts\bootstrap.min.js" />
+    <Content Include="content\scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="content\scripts\main.js" />
+    <Content Include="content\styles\bootstrap.min.css" />
+    <Content Include="failed.html" />
+    <Content Include="index.html" />
+    <Content Include="success.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using crm.client;
+using crm.sdk;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,18 @@ namespace web.crm.Controllers
                 return Redirect("/Account/Index");
             ViewBag.ShowModal = (((new Random()).Next(1,4)) % 2) == 0;
             return View();
+        }
+
+        public ActionResult Create(object entity)
+        {
+            return Redirect("/Home/Index");
+        }
+
+        [HttpPost]
+        public ActionResult SaveContact(Contact contact)
+        {
+            var res = new { RequestId = Guid.NewGuid().ToString(), Result = "Success", Action = "Save", Object = contact };
+            return Json(res, JsonRequestBehavior.AllowGet);
         }
     }
 }
